@@ -1,4 +1,26 @@
 {
-  "name": "md-links",
-  "version": "0.1.0"
+  "name": "verde-two",
+  "version": "0.1.0",
+  "description": "## Preámbulo",
+  "main": "index.js",
+  "directories": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verde-two/GDL002-md-links.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/verde-two/GDL002-md-links/issues"
+  },
+  "homepage": "https://github.com/verde-two/GDL002-md-links#readme"
 }
