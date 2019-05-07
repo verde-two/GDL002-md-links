@@ -3,14 +3,18 @@
   "version": "0.1.0",
   "description": "## Preámbulo",
   "main": "index.js",
-  "directories": {
-   
+  "scripts": {
+    "eslint": "eslint --ext .js src/ test/",
+    "test": "jest --env=node"
+  
   },
+
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^22.1.2",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
@@ -18,10 +22,7 @@
     "jest": "^24.8.0",
     "webpack": "^4.30.0"
   },
-  "scripts": {
-    "test": "jest"
-    
-  },
+ 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/verde-two/GDL002-md-links.git"
