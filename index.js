@@ -1,7 +1,13 @@
-module.exports.saludar = () => {
-   console.log('Hola Mundo');
-  
+
+//};librerias
+
+const saludar = (path) =>{
+   return console.log("Hola mundo");
 };
+
+module.exports = {
+   saludar
+}
 
 const os = require ('os');
 //const fs = require ('fs');

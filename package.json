@@ -2,12 +2,16 @@
   "name": "md-links",
   "version": "0.1.0",
   "description": "## Preámbulo",
-  "main": "index.js",
+  "main": "cli.js",
   "scripts": {
     "eslint": "eslint --ext .js src/ test/",
+    "pretest": "npm run eslint",
     "test": "jest --env=node"
   
   },
+  "bin": {
+    "md-links": "./bin/cli.js"
+},
 
   "dependencies": {},
   "devDependencies": {
