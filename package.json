@@ -1,13 +1,15 @@
 {
-  "name": "verde-two",
+  "name": "md-links",
   "version": "0.1.0",
   "description": "## Preámbulo",
   "main": "index.js",
   "directories": {
-    "test": "jest"
+   
   },
   "dependencies": {},
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.2",
@@ -18,6 +20,7 @@
   },
   "scripts": {
     "test": "jest"
+    
   },
   "repository": {
     "type": "git",
