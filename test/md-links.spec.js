@@ -1,24 +1,14 @@
-//const mdLinks = require('../');
+const mdLinks = require('../index.js');
 
-
-//describe('mdLinks', () => {
-
-//  it('should...', () => {
-//    console.log('FIX ME!');
-//  });
-
-//});
-
-// __tests__/index.test.js
-describe('initial', () => {
-  test('first tests', () => {
-     expect(true).toBe(true)
- })
-})
-
-//Test de links
-require("./README.md");
-  .then(links => {
-    // => [{ href, text, file }]
-  })
-  .catch(console.error);
+/**Primer test, verifica que exista una ruta de archivo */
+describe('pathInserted', () => {
+  test('Should be a function', () => {
+     expect(typeof mdLinks.pathInserted).toBe('function');
+  });
+    it('Should return false',() => {
+      expect(mdLinks.pathInserted()).toBe(false);
+  });
+it('Should return true',() => {
+  expect(mdLinks.pathInserted('./README.md')).toBe(true);
+  });
+});

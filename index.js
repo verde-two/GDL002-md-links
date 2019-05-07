@@ -1,28 +1,26 @@
 
-//};librerias
+//librerias
+const fs = require('fs');
+const path = require('path');
 
-const saludar = (path) =>{
-   return console.log("Hola mundo");
+//const saludar = (path) =>{
+//   return console.log("Hola mundo");
+//};
+
+/**Función que valida si existe una ruta de Archivo */
+const pathInserted = (pathFile) => {
+   if(pathFile == undefined){
+      
+      return false;
+   }
+   else{
+      return true;
+   }
 };
 
 module.exports = {
-   saludar
-}
+   'pathInserted': pathInserted,
+   
+};
 
-const os = require ('os');
-//const fs = require ('fs');
-
-let cpu = os.cpus();
-let sistema = os.plataform();
-let usuario = os.hostname();
-
-console.log(cpu);
-console.log(sistema)
-console.log(usuario);
-
-//fs.appendFile('mitocode.txt','Informacion del cpu: ' + cpu,function (error) {
-//    if(error){
-//    console.log('Error al crear archivo');
-//    }
-//})
 
