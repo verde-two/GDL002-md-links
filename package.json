@@ -7,12 +7,10 @@
     "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint",
     "test": "jest --env=node"
-  
   },
   "bin": {
     "md-links": "./bin/cli.js"
-},
-
+  },
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -26,7 +24,6 @@
     "jest": "^24.8.0",
     "webpack": "^4.30.0"
   },
- 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/verde-two/GDL002-md-links.git"
