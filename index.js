@@ -2,8 +2,9 @@
    const fs = require('fs');
    const path = require('path');
    const filePath = process.argv[2];
-   const readPath = fs.readFile(filePath, 'utf8');
-
+   // readFileSync() corre en node // readFile() corre test?
+   const readPath = fs.readFileSync(filePath, 'utf8');
+   
 
    //const saludar = (path) =>{
    //   return console.log("Hola mundo");
