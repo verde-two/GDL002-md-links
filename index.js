@@ -2,7 +2,7 @@
    const fs = require('fs');
    const path = require('path');
    const filePath = process.argv[2];
-   const readPath = fs.readFileSync(filePath, 'utf8');
+   const readPath = fs.readFile(filePath, 'utf8');
 
 
    //const saludar = (path) =>{
@@ -19,9 +19,9 @@
    };
 
 
-   //Función para extraer links de archivo MD
+   //Función para extraer links de archivo MD  
    const extractorInf = (extract) => {
-     const regularExpression = /\[(.*?)\]\((.*?)\)/gi;
+     const regularExpression = /\[(.*?)\]\((.*?)\)/g; 
      let haveArray = [];
      //El método match() con búsqueda global (modificador "g") busca una o todas las coincidencias
      // de una expresión regular sobre un String, devolviéndolas en un array
@@ -29,8 +29,10 @@
        //método exec(),se ejecuta sobre la expresión regular, siendo su argumento el String. Con una búsqueda global 
        //y con cada ejecución modificará las propiedades 
        arrayContent = {
-         href: match[2],
-         text: match[1]
+         file: match[1],
+         href: match[2]
+         //text: match[3] indefinido // texto(<a>)
+         
        };
        haveArray.push(arrayContent);
      };
