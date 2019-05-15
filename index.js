@@ -34,6 +34,24 @@
      }
    };
 
+      //Funcion que comprueba el status 
+      const checkStatus = (data) => {
+        console.log('holi',data);
+       /* data.href.forEach((link) => {
+          console.log(link);
+          fetch(link).then((response) => {
+          if (response.status == 200) {
+            console.log('ok' + link);
+          } else {
+            
+          }
+        });
+    
+    
+      });*/
+
+    }
+    
 
    //Función para extraer links de archivo MD  
    const extractorInf = (extract) => {
@@ -52,24 +70,12 @@
        };
        haveArray.push(arrayContent);
      };
+     checkStatus(arrayContent);
      return haveArray;
    };
 
-   /*fetch(haveArray.href).then((response) => {
-    if(response.ok) {
-      console.log('corre');
-     // response.blob().then((miBlob) => {
-       // let objectURL = URL.createObjectURL(miBlob);
-       // miImagen.src = objectURL;
-      }
-     else {
-      console.log('Respuesta de red OK.');
-    }
-  })
-  .catch(function(error) {
-    console.log('Hubo un problema con la petición Fetch:' + error.message);
-  });
-*/
+
+
    //Nos muestra en la terminal array de links
    console.log(extractorInf(readPath));
    console.log('found links:' + extractorInf(readPath).length);
@@ -78,4 +84,5 @@
      //  'validate' : validate,
      'pathInserted': pathInserted,
      'extractorInf': extractorInf,
+     checkStatus,
    };
