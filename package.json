@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "eslint": "eslint --ext .js src/ test/",
-    "test": "jest --coverage --colors"
+    "test": "jest --coverage --colors",
+    "md-links": "node index.js"
   },
   "bin": {
-    "md-links": "./bin/cli.js"
+    "mdLinks": "./index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-fetch": "^2.5.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",

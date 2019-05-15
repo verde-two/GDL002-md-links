@@ -15,10 +15,10 @@ describe('pathInserted', () => {
 
 describe('extractorInf', () => {
   it('Should be a function', () => {
-      expect(typeof mdLinks.extractorInf).toBe('function');
-    });
+     expect(typeof mdLinks.extractorInf).toBe('function');
+  });
   it('Should return an array', () => {
-    expect(mdLinks.extractorInf()).toEqual([]);
+     expect(mdLinks.extractorInf()).toEqual([]);
   })
-  
+      
   });
