@@ -14,17 +14,18 @@
    //     return console.log("Hola mundo");
    //  };
    // validando si es un archivo
-  fs.readFile('./README.md', (err, data) => {
-    if (err) throw err;
-    console.log(data,'archivo' );
-  });
-  //validando si es in directorio
-  /*fs.readFile('./GDL002-md-links/', (err, data) => {
-    if (err) throw err;
-    console.log(data,'directorios' );
-      // => [Error: EISDIR: illegal operation on a directory, read <directory>]
-  });
-  */
+   //fs.readFile('./README.md', (err, data) => {
+   //  if (err) throw err;
+   //  console.log(data, 'archivo');
+   //});
+   //validando si es in directorio
+   /*fs.readFile('./GDL002-md-links/', (err, data) => {
+     if (err) throw err;
+     
+     console.log(data,'directorios' );
+       // => [Error: EISDIR: illegal operation on a directory, read <directory>]
+   });
+   */
    //Función que valida si existe una ruta de Archivo 
    const pathInserted = (pathFile) => {
      if (pathFile == undefined) {
@@ -34,29 +35,31 @@
      }
    };
 
-      //Funcion que comprueba el status 
-      const checkStatus = (data) => {
-        console.log('holi',data);
-       /* data.href.forEach((link) => {
-          console.log(link);
-          fetch(link).then((response) => {
+   //Funcion que comprueba el status 
+   const checkStatus = (data) => {
+     console.log('holi', data);
+     haveArray.forEach((link) => {
+       console.log('primero', link);
+       fetch(link.href).then((response) => {
           if (response.status == 200) {
-            console.log('ok' + link);
-          } else {
-            
+            console.log('ok' + link.href);
+          } else { 
+            console.log('fail' + link);
           }
+        })
+        .catch((error) => {
+          console.log('Hubo un problema con la petición Fetch:' + error.message);
         });
-    
-    
-      });*/
 
-    }
-    
+     });
+      
+   };
+
 
    //Función para extraer links de archivo MD  
    const extractorInf = (extract) => {
      const regularExpression = /\[(.*?)\]\((.*?)\)/g;
-     
+
      //El método match() con búsqueda global (modificador "g") busca una o todas las coincidencias
      // de una expresión regular sobre un String, devolviéndolas en un array
      while (match = regularExpression.exec(extract)) {
@@ -69,20 +72,21 @@
 
        };
        haveArray.push(arrayContent);
+       checkStatus(arrayContent);
      };
-     checkStatus(arrayContent);
-     return haveArray;
+
+     return arrayContent;
    };
 
 
 
    //Nos muestra en la terminal array de links
-   console.log(extractorInf(readPath));
-   console.log('found links:' + extractorInf(readPath).length);
+   console.log(extractorInf(readPath))
+   console.log('found links:' + extractorInf(readPath));
 
    module.exports = {
-     //  'validate' : validate,
-     'pathInserted': pathInserted,
-     'extractorInf': extractorInf,
+     //   validate,
+     pathInserted,
+     extractorInf,
      checkStatus,
    };
